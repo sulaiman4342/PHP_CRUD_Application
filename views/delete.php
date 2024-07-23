@@ -11,7 +11,8 @@ $successMessage = '';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     CRUDController::delete($id);
     $successMessage = 'Successfully deleted';
-    header('Refresh: 1; URL=../index.php'); // Redirect after 1 second to allow the alert to show
+    header('Location: ../index.php'); // Redirect immediately
+    exit(); // Ensure no further code is executed after redirection
 }
 ?>
 
@@ -33,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     <?php if ($successMessage): ?>
         <script>
-            alert('<?php echo $successMessage; ?>');
+            alert('<?php echo addslashes($successMessage); ?>');
         </script>
     <?php endif; ?>
 </body>
