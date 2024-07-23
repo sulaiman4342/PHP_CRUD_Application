@@ -6,11 +6,13 @@ use App\Controllers\CRUDController;
 
 $id = $_GET['id'];
 
+$successMessage = '';
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     CRUDController::delete($id);
-    header('Location: ../index.php');
+    $successMessage = 'Successfully deleted';
+    header('Refresh: 1; URL=../index.php'); // Redirect after 1 second to allow the alert to show
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -28,5 +30,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <input type="submit" value="Delete">
         <a href="../index.php">Cancel</a>
     </form>
+    
+    <?php if ($successMessage): ?>
+        <script>
+            alert('<?php echo $successMessage; ?>');
+        </script>
+    <?php endif; ?>
 </body>
 </html>
