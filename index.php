@@ -1,3 +1,8 @@
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+
 <?php
 
 require_once './src/models/DataModel.php';
@@ -40,7 +45,7 @@ $data = CRUDController::readAll();
                 <?php endforeach; ?>
             <?php else: ?>
                 <tr>
-                    <td colspan="3">No data available</td>
+                    <td colspan="3">Currently No data available</td>
                 </tr>
             <?php endif; ?>
         </tbody>
