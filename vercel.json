@@ -3,19 +3,19 @@
     "builds": [
       {
         "src": "index.php",
-        "use": "@vercel/php"
+        "use": "@vercel/static-build"
       },
       {
         "src": "views/**/*.php",
-        "use": "@vercel/php"
+        "use": "@vercel/static-build"
       },
       {
         "src": "src/**/*.php",
-        "use": "@vercel/php"
+        "use": "@vercel/static-build"
       },
       {
         "src": "api/**/*.php",
-        "use": "@vercel/php"
+        "use": "@vercel/static-build"
       }
     ],
     "routes": [
