@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-require_once 'C:/xampp/htdocs/crud_application/src/config/config.php';
+require_once __DIR__ . '/../config/config.php'; // Adjusted to use relative path
 
 class DataModel
 {

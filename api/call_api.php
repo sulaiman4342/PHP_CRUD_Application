@@ -1,6 +1,6 @@
 <?php
 
-require_once '../src/controllers/CRUDController.php';
+require_once __DIR__ . '/../src/controllers/CRUDController.php';
 
 use App\Controllers\CRUDController;
 

@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-require_once 'C:/xampp/htdocs/crud_application/src/models/DataModel.php';
+require_once __DIR__ . '/../models/DataModel.php'; // Adjusted to use relative path
 
 use App\Models\DataModel;
 
